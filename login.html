@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Signup - BUK Housing Connect</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <div class="brand">BUK Housing Connect</div>
+      <div>
+        <a href="index.html">Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="grid">
+      <div class="card">
+        <h3>Create Account</h3>
+        <label>Full Name</label>
+        <input id="signupName" class="input" placeholder="Your name">
+        <label class="mt-2">Email</label>
+        <input id="signupEmail" type="email" class="input" placeholder="you@example.com">
+        <label class="mt-2">Password</label>
+        <input id="signupPassword" type="password" class="input" placeholder="********">
+        <label class="mt-2">Role</label>
+        <select id="signupRole" class="input">
+          <option value="student">Student</option>
+          <option value="landlord">Landlord</option>
+        </select>
+        <button class="btn mt-3" onclick="signup()">Sign Up</button>
+      </div>
+
+      <div class="card">
+        <h3>Login</h3>
+        <p class="mt-2" style="color:var(--muted);">Admin (default): admin@buk.com / adminpassword</p>
+        <label class="mt-2">Email</label>
+        <input id="loginEmail" type="email" class="input" placeholder="you@example.com">
+        <label class="mt-2">Password</label>
+        <input id="loginPassword" type="password" class="input" placeholder="********">
+        <button class="btn mt-3" onclick="login()">Login</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

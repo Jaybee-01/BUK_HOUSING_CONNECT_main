@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - BUK Housing Connect</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <div class="brand">Admin Panel</div>
+      <div>
+        <a href="index.html">Home</a>
+        <span id="navUser" style="margin-left:12px;"></span>
+        <span id="navActions" style="margin-left:12px;"></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h3>All Properties</h3>
+    <div class="table-wrap mt-3">
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th><th>Price</th><th>Location</th><th>Landlord</th><th>Verified</th><th>Created</th><th>Verify</th><th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="allPropsTBody"></tbody>
+      </table>
+    </div>
+
+    <h3 class="mt-6">Landlords</h3>
+    <div class="table-wrap mt-3">
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Email</th><th>Role</th><th>Action</th></tr>
+        </thead>
+        <tbody id="landlordsTBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

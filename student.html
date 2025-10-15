@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student - BUK Housing Connect</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <div class="brand">Student Dashboard</div>
+      <div>
+        <a href="index.html">Home</a>
+        <span id="navUser" style="margin-left:12px;"></span>
+        <span id="navActions" style="margin-left:12px;"></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Verified Properties</h2>
+    <div id="sPropertyList" class="grid mt-3"></div>
+  </div>
+
+  <!-- Details Overlay -->
+  <div id="sDetailsOverlay">
+    <div id="sDetailsWrap"></div>
+  </div>
+
+  <!-- Booking Modal -->
+  <div class="modal" id="sBookingModal">
+    <div class="panel">
+      <h3>Request Booking</h3>
+      <label class="mt-3">Message (optional)</label>
+      <textarea id="sBkNote" rows="3" class="input" placeholder="Introduce yourself, preferred time, etc."></textarea>
+      <div class="mt-3">
+        <button class="btn" onclick="sConfirmBooking()">Confirm</button>
+        <button class="btn danger" onclick="document.getElementById('sBookingModal').style.display='none'">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/student.js"></script>
+</body>
+</html>
