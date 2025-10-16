@@ -71,10 +71,12 @@ function logout() {
   window.location.href = "index.html";
 }
 
+// Handles which user is actually logs in and if no user is logged in it shows 'Guest' and link to login or signup
 function navRender() {
   const u = getLogged();
   const navUser = document.getElementById("navUser");
-  const navActions = document.getElementById("navActions");
+  const navActions = document.getElementById("navActions1");
+  const navActions2 = document.getElementById("navActions2");
   if (!navUser || !navActions) return;
   if (u) {
     navUser.textContent = `${u.name || u.email} (${u.role})`;
@@ -84,7 +86,9 @@ function navRender() {
       ${u.role === "student" ? '<a href="student.html">Student</a>' : ""}
       <a href="#" id="logoutLink">Logout</a>
     `;
+    //the link above is dynamically created
     setTimeout(() => {
+      //waits for 0 seconds and then set a logout onclick func to it
       const link = document.getElementById("logoutLink");
       if (link)
         link.onclick = (e) => {
@@ -94,7 +98,8 @@ function navRender() {
     }, 0);
   } else {
     navUser.textContent = "Guest";
-    navActions.innerHTML = `<a href="login.html">Login / Signup</a>`;
+    navActions.innerHTML = `<a href="login.html">Login</a>`;
+    navActions2.innerHTML = `<a href="login.html">SignUp</a>`;
   }
 }
 document.addEventListener("DOMContentLoaded", navRender);

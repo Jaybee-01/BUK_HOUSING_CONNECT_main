@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>BUK Housing Connect</title>
+  <title>BUK Housing Connect - A web-based accommodation finder</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg">
+  <link rel="stylesheet" href="./CSS/styles.css">
+  <link rel="stylesheet" href="./CSS/responsiveness.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
 
   <nav class="nav">
@@ -12,12 +22,42 @@
       <div class="brand"><img src="img/main-logo.png" alt=""></div>
       <div>
         <span id="navUser"></span>
-        <span id="navActions" style="margin-left:12px;"></span>
+        <span id="navActions1" style="margin-left:12px;"></span>
+        <span id="navActions2" style="margin-left:12px;"></span>
       </div>
     </div>
   </nav>
 
-  <div class="container">
+  <!-- main hero section -->
+  <section id="hero">
+    <div>
+      <h1>Welcome to BUK Housing Connect</h1>
+      <p>The best selection of student accommodations near BUK, tailored for you.</p>
+    </div>
+  </section>
+
+  <!-- search details section -->
+  <section id="search-section">
+    <div>
+      <label for="">Search Location</label> <br>
+      <input type="search" id="searchInput" placeholder="Search by Location">
+    </div>
+    <div>
+      <label for="priceRange">Price Range: <span id="priceValue">70,000</span></label> <br>
+      <input type="range" id="priceRange" min="70000" max="250000" step="10000" value="70000">
+    </div>
+    <div>
+      <label for="">Property type</label>
+      <select name="" id="">
+        <option value="">All types</option>
+        <option value="">Apartment</option>
+        <option value="">Self Contain</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Available properties section -->
+  <div class="container availProperties">
     <h2>Available Properties</h2>
     <div id="propertyList" class="grid mt-3"></div>
   </div>
@@ -33,7 +73,8 @@
       <h3>Request Booking</h3>
       <p id="bkTitle" class="mt-2"></p>
       <label class="mt-3">Message (optional)</label>
-      <textarea id="bkNote" rows="3" class="input" placeholder="Introduce yourself, preferred viewing time, etc."></textarea>
+      <textarea id="bkNote" rows="3" class="input"
+        placeholder="Introduce yourself, preferred viewing time, etc."></textarea>
       <div class="mt-3">
         <button class="btn" onclick="confirmBooking()">Confirm</button>
         <button class="btn danger" onclick="closeBooking()">Cancel</button>
@@ -41,30 +82,31 @@
     </div>
   </div>
 
-  
-    <!-- footer section -->
-    <footer>
-        <section>
-            <img src="img/main-logo.png" alt="" width="200px">
-            <!-- <h1>🏠BUK Housing Connect</h1> -->
-            <p>Your connection to the best student housing near Bayero University, Kano</p>
-            <div>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About us</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="./landlord.html" id="landlordBtn">Landlord</a></li>
-                    <li><a href="">Admin</a></li>
-                </ul>
-            </div>
-            <hr>
-            <section>
-                <p> &copy; 2025 BUK Housing Connect. All rights reserved.</p>
-            </section>
-        </section>
-    </footer>
+
+  <!-- footer section -->
+  <footer>
+    <section>
+      <img src="img/main-logo.png" alt="" width="200px">
+      <!-- <h1>🏠BUK Housing Connect</h1> -->
+      <p>Your connection to the best student housing near Bayero University, Kano</p>
+      <div>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About us</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="./landlord.html" id="landlordBtn">Landlord</a></li>
+          <li><a href="">Admin</a></li>
+        </ul>
+      </div>
+      <hr>
+      <section>
+        <p> &copy; 2025 BUK Housing Connect. All rights reserved.</p>
+      </section>
+    </section>
+  </footer>
 
   <script src="js/utils.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -3,8 +3,9 @@
   --danger: #dc2626;
   --ok: #16a34a;
   --muted: #6b7280;
-  --bg: #f3f4f6;
+  --bg: #fff;
   --card: #ffffff;
+  --bg2: #f1f2f5;
 }
 
 * {
@@ -15,7 +16,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: system-ui, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   background: var(--bg);
   color: #0f172a;
 }
@@ -23,12 +24,19 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 10px;
 }
 
 .nav {
-  background: #0f172a;
-  color: #fff;
+  background: var(--bg2);
+  color: black;
+
+  /* makes the navigation to be fixed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
 .nav .container {
@@ -38,23 +46,74 @@ body {
 }
 
 .nav a {
-  color: #cbd5e1;
+  color: black;
   text-decoration: none;
-  margin-left: 16px;
 }
 
 .nav a:hover {
-  color: #fff;
+  color: #07098f;
 }
 
-.brand {
-  font-weight: 700;
-  color: #fff;
-}
 .brand img {
   width: 40%;
 }
 
+/* for the Users */
+.nav #navActions2 a {
+  background-color: rgb(68, 68, 209);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Hero section */
+#hero {
+  height: 80vh;
+  color: white;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+
+  background-image: url(../img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* Search details section */
+#search-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(241, 242, 245);
+    height: 130px;
+    border-radius: 5px;
+    max-width: 1200px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+    margin: auto;
+}
+
+#search-section input, select {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+/* Properties section */
+.availProperties {
+  margin-top: 50px;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -111,18 +170,25 @@ body {
 select,
 textarea {
   width: 100%;
-  padding: 10px 12px;
+  /* padding: 10px 12px; */
   border: 1px solid #d1d5db;
   border-radius: 8px;
   outline: none;
   background: #fff;
+/* 
+  width: 100%;
+    padding: 7px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-sizing: border-box; */
 }
 
-label {
+/* label {
   display: block;
   font-weight: 600;
   margin: 10px 0 6px;
-}
+} */
 
 .row {
   display: grid;
