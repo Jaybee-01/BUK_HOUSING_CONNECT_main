@@ -43,15 +43,17 @@
       <input type="search" id="searchInput" placeholder="Search by Location">
     </div>
     <div>
-      <label for="priceRange">Price Range: <span id="priceValue">70,000</span></label> <br>
-      <input type="range" id="priceRange" min="70000" max="250000" step="10000" value="70000">
+      <label for="priceRange">Price Range: <span id="priceValue">100,000</span></label> <br>
+      <input type="range" id="priceRange" min="100000" max="350000" step="10000" value="70000">
     </div>
     <div>
-      <label for="">Property type</label>
-      <select name="" id="">
-        <option value="">All types</option>
-        <option value="">Apartment</option>
-        <option value="">Self Contain</option>
+      <label for="type">Property type</label>
+      <select name="type" id="type">
+        <option value="">Select property type</option>
+        <option value="all">All types</option>
+        <option value="apartment">Apartment</option>
+        <option value="selfcontain">Self Contain</option>
+        <option value="flat">Flat</option>
       </select>
     </div>
   </section>

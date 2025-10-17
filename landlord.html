@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Landlord Dashboard - BUK Housing Connect</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <nav class="nav">
     <div class="container">
-       <div class="brand"><a href="index.html"><img src="img/main-logo.png" alt=""></a></div>
+      <div class="brand"><a href="index.html"><img src="img/main-logo.png" alt=""></a></div>
       <div>
         <span id="navUser" style="margin-left:12px;"></span>
         <span id="navActions" style="margin-left:12px;"></span>
@@ -34,6 +36,15 @@
         </div>
         <label class="mt-2">Image URL (optional)</label>
         <input name="image" class="input" placeholder="https://...">
+        
+        <label for="type">Property Type</label>
+        <select name="type" id="type" required>
+          <option value="">Select property type</option>
+          <option value="apartment">Apartment</option>
+          <option value="selfcontain">Self Contain</option>
+          <option value="flat">Flat</option>
+        </select>
+
         <label class="mt-2">Description</label>
         <textarea name="description" rows="3" class="input" placeholder="Short description"></textarea>
         <button class="btn mt-3" type="submit">Add Property</button>
@@ -46,7 +57,12 @@
         <table>
           <thead>
             <tr>
-              <th>Title</th><th>Price</th><th>Location</th><th>Verified</th><th>Created</th><th>Actions</th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Location</th>
+              <th>Verified</th>
+              <th>Created</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody id="myPropsTBody"></tbody>
@@ -55,8 +71,9 @@
     </div>
   </div>
 
-  
+
   <script src="js/utils.js"></script>
   <script src="js/landlord.js"></script>
 </body>
+
 </html>
