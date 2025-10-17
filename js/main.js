@@ -87,6 +87,8 @@ function setupFilters() {
     });
   });
 
+
+  // handles the select input
   const propertyType = document.getElementById("type");
 
   propertyType.addEventListener("change", () => {
@@ -104,8 +106,6 @@ function setupFilters() {
     });
   });
 }
-
-// Handles
 
 function handleViewDetails(id) {
   const u = getLogged();

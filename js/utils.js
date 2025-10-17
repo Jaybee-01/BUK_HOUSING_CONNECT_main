@@ -79,11 +79,11 @@ function navRender() {
   const navActions2 = document.getElementById("navActions2");
   if (!navUser || !navActions) return;
   if (u) {
-    navUser.textContent = `${u.name || u.email} (${u.role})`;
+    navUser.innerHTML = `${u.name || u.email} (<a href="${u.role}.html">${u.role}</a>)`;
     navActions.innerHTML = `
-      ${u.role === "admin" ? '<a href="admin.html">Admin</a>' : ""}
-      ${u.role === "landlord" ? '<a href="landlord.html">Landlord</a>' : ""}
-      ${u.role === "student" ? '<a href="student.html">Student</a>' : ""}
+      ${u.role === "admin" ? '' : ""}
+      ${u.role === "landlord" ? '' : ""}
+      ${u.role === "student" ? '' : ""}
       <a href="#" id="logoutLink">Logout</a>
     `;
     //the link above is dynamically created

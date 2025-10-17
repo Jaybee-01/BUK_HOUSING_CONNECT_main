@@ -1,24 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Login | Signup - BUK Housing Connect</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <nav class="nav">
     <div class="container">
-      <div class="brand">BUK Housing Connect</div>
+      <div class="brand"><a href="index.html"><img src="img/main-logo.png" alt=""></div>
       <div>
         <a href="index.html">Home</a>
       </div>
     </div>
   </nav>
 
-  <div class="container">
-    <div class="grid">
+  <div class="form-container">
+    <div class="form1">
       <div class="card">
-        <h3>Create Account</h3>
+        <h3>Welcome Back!</h3>
+        <p>Login to access your account</p>
+        <div id="logtype">
+          <button class="btn active" id="studentBtn">Login</button>
+          <button class="btn" id="landlordBtn">SignUp</button>
+        </div>
+
+        <!-- for login -->
+        <p class="mt-2" style="color:var(--muted);">Admin (default): admin@buk.com / adminpassword</p>
+        <label class="mt-2">Email</label>
+        <input id="loginEmail" type="email" class="input" placeholder="you@example.com">
+        <label class="mt-2">Password</label>
+        <input id="loginPassword" type="password" class="input" placeholder="********">
+        <button class="btn" onclick="login()">Login</button>
+
+
+      </div>
+
+      <!-- for sign up -->
+      <div class="card">
+        <h3>Create an Account</h3>
+        <p>Join our community of Students and Landlords</p>
         <label>Full Name</label>
         <input id="signupName" class="input" placeholder="Your name">
         <label class="mt-2">Email</label>
@@ -30,22 +53,27 @@
           <option value="student">Student</option>
           <option value="landlord">Landlord</option>
         </select>
-        <button class="btn mt-3" onclick="signup()">Sign Up</button>
-      </div>
-
-      <div class="card">
-        <h3>Login</h3>
-        <p class="mt-2" style="color:var(--muted);">Admin (default): admin@buk.com / adminpassword</p>
-        <label class="mt-2">Email</label>
-        <input id="loginEmail" type="email" class="input" placeholder="you@example.com">
-        <label class="mt-2">Password</label>
-        <input id="loginPassword" type="password" class="input" placeholder="********">
-        <button class="btn mt-3" onclick="login()">Login</button>
+        <button class="btn" onclick="signup()">Sign Up</button>
       </div>
     </div>
   </div>
 
+
+      <footer>
+        <section>
+            <img src="img/main-logo.png" alt="" width="150px">
+            <!-- <h1>🏠BUK Housing Connect</h1> -->
+            <p>Your connection to the best student housing near Bayero University, Kano.</p>
+            <hr>
+            <section>
+                <p>&copy;2025 BUK Housing Connect. All rights reserved.</p>
+            </section>
+        </section>
+    </footer>
+
+
   <script src="js/utils.js"></script>
   <script src="js/auth.js"></script>
 </body>
+
 </html>
