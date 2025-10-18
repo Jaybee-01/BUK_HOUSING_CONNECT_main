@@ -5,6 +5,14 @@
   <meta charset="UTF-8">
   <title>Landlord Dashboard - BUK Housing Connect</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="./img/main-logo.png">
+  <link rel="stylesheet" href="./CSS/styles.css">
+  <link rel="stylesheet" href="./CSS/responsiveness.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -13,12 +21,14 @@
       <div class="brand"><a href="index.html"><img src="img/main-logo.png" alt=""></a></div>
       <div>
         <span id="navUser" style="margin-left:12px;"></span>
-        <span id="navActions" style="margin-left:12px;"></span>
+        <span id="navActions1" style="margin-left:12px;"></span>
+        <!-- <a href="index.html">Home</a> -->
+        <!-- <a href="">Landlord |</a> -->
       </div>
     </div>
   </nav>
 
-  <div class="container">
+  <div class="container addProperty">
     <div class="card">
       <h3>Add Property</h3>
       <form id="propForm" class="mt-3">
@@ -26,26 +36,30 @@
         <input name="title" class="input" placeholder="e.g., 2 Bedroom Apartment" required>
         <div class="row">
           <div>
-            <label class="mt-2">Price (₦)</label>
+            <label class="mt-2 label">Price (₦)</label>
             <input name="price" type="number" class="input" placeholder="e.g., 250000" required>
           </div>
           <div>
-            <label class="mt-2">Location</label>
+            <label class="mt-2 label">Contact</label>
+            <input type="tel" name="contact"  class="input" id="phone" placeholder="e.g. +2348012345678" required />
+          </div>
+          <div>
+            <label class="mt-2 label">Location</label>
             <input name="location" class="input" placeholder="e.g., Near New Campus" required>
           </div>
         </div>
-        <label class="mt-2">Image URL (optional)</label>
+        <label class="mt-2 label">Image URL (optional)</label>
         <input name="image" class="input" placeholder="https://...">
-        
+
         <label for="type">Property Type</label>
-        <select name="type" id="type" required>
+        <select name="type" id="type" class="select" required>
           <option value="">Select property type</option>
           <option value="apartment">Apartment</option>
           <option value="selfcontain">Self Contain</option>
           <option value="flat">Flat</option>
         </select>
 
-        <label class="mt-2">Description</label>
+        <label class="mt-2 label">Description</label>
         <textarea name="description" rows="3" class="input" placeholder="Short description"></textarea>
         <button class="btn mt-3" type="submit">Add Property</button>
       </form>
@@ -59,6 +73,7 @@
             <tr>
               <th>Title</th>
               <th>Price</th>
+              <th>Contact</th>
               <th>Location</th>
               <th>Verified</th>
               <th>Created</th>
@@ -70,6 +85,21 @@
       </div>
     </div>
   </div>
+
+
+
+  <!-- Footer section -->
+  <footer>
+    <section>
+      <img src="img/main-logo.png" alt="" width="150px">
+      <!-- <h1>🏠BUK Housing Connect</h1> -->
+      <p>Your connection to the best student housing near Bayero University, Kano.</p>
+      <hr>
+      <section>
+        <p>&copy;2025 BUK Housing Connect. All rights reserved.</p>
+      </section>
+    </section>
+  </footer>
 
 
   <script src="js/utils.js"></script>

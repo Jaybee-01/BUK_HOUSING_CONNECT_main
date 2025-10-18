@@ -61,6 +61,7 @@ function renderLandlords(){
     tr.innerHTML = `
       <td>${u.name || "-"}</td>
       <td>${u.email}</td>
+      <td>${u.contact}</td>
       <td>landlord</td>
       <td><button class="btn danger" data-remove="${u.email}">Remove</button></td>
     `;

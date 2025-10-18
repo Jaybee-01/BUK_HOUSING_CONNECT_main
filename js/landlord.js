@@ -16,6 +16,7 @@ function renderMyProps() {
     tr.innerHTML = `
       <td>${p.title}</td>
       <td>${currency(p.price)}</td>
+      <td>${p.contact}</td>
       <td>${p.location}</td>
       <td>${p.verified ? "Yes" : "No"}</td>
       <td>${new Date(p.createdAt).toLocaleString()}</td>
@@ -44,6 +45,7 @@ form.addEventListener("submit", (e) => {
     id: genId("prop"),
     title: fd.get("title").toString().trim(),
     price: Number(fd.get("price") || 0),
+    contact: Number(fd.get("contact")),
     type: fd.get("type")?.toString().trim().toLowerCase() || "apartment",
     location: fd.get("location").toString().trim(),
     description: fd.get("description").toString().trim(),
@@ -52,8 +54,8 @@ form.addEventListener("submit", (e) => {
     verified: false,
     createdAt: new Date().toISOString(),
   };
-  if (!prop.title || !prop.price || !prop.location)
-    return alert("Title, price, and location are required.");
+  if (!prop.title || !prop.contact || !prop.price || !prop.location)
+    return alert("Title, price, contact and location are required.");
 
   const props = getProps();
   props.push(prop);

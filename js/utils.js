@@ -76,7 +76,7 @@ function navRender() {
   const u = getLogged();
   const navUser = document.getElementById("navUser");
   const navActions = document.getElementById("navActions1");
-  const navActions2 = document.getElementById("navActions2");
+  // const navActions2 = document.getElementById("navActions2");
   if (!navUser || !navActions) return;
   if (u) {
     navUser.innerHTML = `${u.name || u.email} (<a href="${u.role}.html">${u.role}</a>)`;
@@ -98,8 +98,8 @@ function navRender() {
     }, 0);
   } else {
     navUser.textContent = "Guest";
-    navActions.innerHTML = `<a href="login.html">Login</a>`;
-    navActions2.innerHTML = `<a href="login.html">SignUp</a>`;
+    navActions.innerHTML = `<a href="login.html">Login/Signup</a>`;
+    // navActions2.innerHTML = `<a href="login.html">SignUp</a>`;
   }
 }
 document.addEventListener("DOMContentLoaded", navRender);

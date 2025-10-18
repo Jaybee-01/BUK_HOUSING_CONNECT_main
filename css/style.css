@@ -6,6 +6,7 @@
   --bg: #fff;
   --card: #ffffff;
   --bg2: #f1f2f5;
+  --bg3: #d2dee7;
 }
 
 * {
@@ -27,65 +28,31 @@ body {
   padding: 10px;
 }
 
-.form-container {
-  margin: 100px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* properties - admin page */
+.properties {
+  margin-top: 100px;
+  max-width: 1000px;
 }
 
-.form1 {
-  max-width: 50%;
-  margin: 10px;
-  padding: 0 10px;
+/* properties - landlord page */
+.addProperty {
+  margin-top: 100px;
+  max-width: 1000px;
+}
+/* properties - student page */
+h2 {
+  margin-top: 120px;
+}
+#sPropertyList {
+  max-width: 1200px;
 }
 
-.form1 .card {
-  margin: 10px;
-
-  input,
-  label {
-    width: 100%;
-    padding: 13px 0;
-    margin: 10px 0;
-    box-sizing: border-box;
-  }
-
-  input {
-    padding: 13px 5px;
-  }
-
-  h3 {
-    margin: 10px 0 20px 0;
-    text-align: center;
-  }
-
-  p {
-    margin: 10px 0 20px 0;
-    text-align: center;
-    font-size: 13px;
-  }
-}
-
-#logtype {
-  text-align: center;
-  width: 90%;
-  margin: auto;
-  background: var(--muted);
-  padding: 4px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-
-  button {
-    width: 49%;
-    box-sizing: border-box;
-  }
-}
-
+/* for the navigation */
 .nav {
   background: var(--bg2);
   color: black;
+  max-width: 1200px;
+  margin: auto;
 
   /* makes the navigation to be fixed */
   position: fixed;
@@ -98,7 +65,8 @@ body {
 .nav .container {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin: 0 100px;
 }
 
 .nav a {
@@ -186,6 +154,18 @@ select {
   gap: 16px;
 }
 
+/* to toggle between login and signup */
+
+.mycard {
+  display: none;
+}
+
+.mycard.active {
+  display: block;
+}
+
+
+/* code for the form cards */
 .card {
   background: var(--card);
   border-radius: 12px;
@@ -233,10 +213,10 @@ select {
 }
 
 .input,
-select,
+.select,
 textarea {
   width: 100%;
-  /* padding: 10px 12px; */
+  padding: 10px 12px;
   border: 1px solid #d1d5db;
   border-radius: 8px;
   outline: none;
@@ -250,17 +230,99 @@ textarea {
     box-sizing: border-box; */
 }
 
-/* label {
+.label {
   display: block;
   font-weight: 600;
   margin: 10px 0 6px;
-} */
+}
 
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
+
+/* for the login page forms */
+.form-container {
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form1 {
+  max-width: 50%;
+  margin: 10px;
+  padding: 0 10px;
+}
+
+.form1 .card {
+  margin: 50px auto;
+  box-shadow: 0px 0px 10px 1px grey;
+  border-radius: 5px;
+
+  input,
+  label {
+    width: 100%;
+    padding: 13px 0;
+    margin: 10px 0;
+    box-sizing: border-box;
+  }
+
+  input {
+    padding: 13px 5px;
+  }
+
+  h3 {
+    margin: 10px 0 20px 0;
+    text-align: center;
+  }
+
+  p {
+    margin: 10px 0 20px 0;
+    text-align: center;
+    font-size: 13px;
+  }
+}
+
+#logtype {
+  text-align: center;
+  width: 90%;
+  margin: 20px auto;
+  background: var(--bg3);
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 4px;
+
+  button {
+    width: 49%;
+    box-sizing: border-box;
+    background: var(--bg3);
+    color: black;
+  }
+}
+
+#logtype .btn.active {
+  border: none;
+  background-color: #E3F2FD;
+  /* background-color: #197fc9; */
+}
+
+.card .loginBtn,
+.signupBtn {
+  display: block;
+  margin: auto;
+  padding: 13px 40px;
+  background: var(--primary);
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+
+
+
 
 @media (max-width:720px) {
   .row {
@@ -296,7 +358,7 @@ th {
 }
 
 .mt-3 {
-  margin-top: 52px;
+  margin-top: 30px;
 }
 
 .mt-4 {
@@ -305,6 +367,9 @@ th {
 
 .mt-6 {
   margin-top: 24px;
+  h3 {
+    margin-top: 50px;
+  }
 }
 
 .center {
@@ -329,9 +394,11 @@ th {
 }
 
 .details-header {
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 40px;
 }
 
 .modal {

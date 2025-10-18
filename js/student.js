@@ -32,13 +32,14 @@ function sRender(){
       if (!p) return;
       currentProp = p;
       sDetailsWrap.innerHTML = `
-        <div class="details-inner">
+        <div class="details-inner mt-details">
           <div class="details-header">
             <h2>${p.title}</h2>
             <button class="btn outline" id="sCloseDetails">Close</button>
           </div>
           <img src="${p.image || 'https://via.placeholder.com/1000x560?text=Property'}" style="width:100%; border-radius:12px; margin:12px 0; aspect-ratio:16/9; object-fit:cover;">
           <p><strong>Price:</strong> ${currency(p.price)}</p>
+          <p><strong>Contact:</strong><a href="tel:234${p.contact}"> +234 ${p.contact}</a></p>
           <p><strong>Location:</strong> ${p.location}</p>
           <p class="mt-2">${p.description || ''}</p>
           <div class="mt-4">
@@ -53,7 +54,7 @@ function sRender(){
   });
 }
 
-function sConfirmBooking(){
+function sConfirmBooking(){ 
   const u = getLogged();
   const note = document.getElementById("sBkNote").value.trim();
   const bookings = getBookings();
