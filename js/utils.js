@@ -79,7 +79,7 @@ function navRender() {
   // const navActions2 = document.getElementById("navActions2");
   if (!navUser || !navActions) return;
   if (u) {
-    navUser.innerHTML = `${u.name || u.email} (<a href="${u.role}.html">${u.role}</a>)`;
+    navUser.innerHTML = `${u.name ? u.name.split(" ")[0] : u.email} (<a href="${u.role}.html">${u.role}</a>)`;
     navActions.innerHTML = `
       ${u.role === "admin" ? '' : ""}
       ${u.role === "landlord" ? '' : ""}

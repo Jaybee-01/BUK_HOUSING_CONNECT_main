@@ -16,6 +16,7 @@ function sRender() {
   props.forEach((p) => {
     const card = document.createElement("div");
     card.className = "card";
+
     card.innerHTML = `
       <img src="${
         p.image || "https://via.placeholder.com/400x220?text=Property"
