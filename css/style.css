@@ -51,7 +51,7 @@ h2 {
 .nav {
   background: var(--bg2);
   color: black;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 
   /* makes the navigation to be fixed */
